@@ -66,7 +66,7 @@ public class AdapterGetData extends RecyclerView.Adapter<AdapterGetData.GetDataC
 
 
                 Intent intent = new Intent(v.getContext(),EditDelete.class);
-                intent.putExtra("nama",datum.getName());
+                intent.putExtra("name",datum.getName());
                 intent.putExtra("email", datum.getEmail());
                 intent.putExtra("password", datum.getPassword());
                 intent.putExtra("data", datum.getData());

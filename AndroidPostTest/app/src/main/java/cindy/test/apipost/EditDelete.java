@@ -2,6 +2,8 @@ package cindy.test.apipost;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,9 +26,10 @@ import retrofit2.Response;
 public class EditDelete extends AppCompatActivity {
 
     public  TextView textView_nama, textView_email, textView_password, textView_data;
-    public Button btn_hapus;
+    public Button btn_hapus, button_edit;
     public TextView textView_id;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,31 @@ public class EditDelete extends AppCompatActivity {
         textView_id=findViewById(R.id.tv_id_edt_dlt);
 
         btn_hapus=findViewById(R.id.btn_delete);
+        button_edit=findViewById(R.id.btn_edit);
+
+
+        textView_nama.setText(" "+getIntent().getStringExtra("name"));
+        textView_email.setText("" + getIntent().getStringExtra("email"));
+        textView_password.setText("" + getIntent().getStringExtra("password"));
+        textView_data.setText("" + getIntent().getStringExtra("data"));
+        textView_id.setText(""+ getIntent().getLongExtra("id", 0));
+
+
+        button_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //ngirim data ke activity edit
+
+                Intent intent = new Intent(EditDelete.this, EditDataInsert.class);
+                intent.putExtra("name", textView_nama.getText());
+                intent.putExtra("email", textView_email.getText());
+                intent.putExtra("password", textView_password.getText());
+                intent.putExtra("data", textView_data.getText());
+                intent.putExtra("id", Long.valueOf(textView_id.getText().toString()));
+                startActivity(intent);
+
+            }
+        });
 
         btn_hapus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,17 +76,7 @@ public class EditDelete extends AppCompatActivity {
             }
         });
 
-        //final long id = Long.valueOf("id");
-
-        textView_nama.setText("nama: "+getIntent().getStringExtra("nama"));
-        textView_email.setText("email" + getIntent().getStringExtra("email"));
-        textView_password.setText("password" + getIntent().getStringExtra("password"));
-        textView_data.setText("data" + getIntent().getStringExtra("data"));
-       // textView_id.setText(Long.valueOf(String.format("id%d", getIntent().getLongExtra("id"))));
-        textView_id.setText(""+ getIntent().getLongExtra("id", 0));
-
-
-        // Bundle bdl=getIntent().getExtras();
+        // get data dari recycler view
 
 
 

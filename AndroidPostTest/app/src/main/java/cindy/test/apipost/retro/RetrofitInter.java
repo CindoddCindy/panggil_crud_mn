@@ -1,6 +1,7 @@
 package cindy.test.apipost.retro;
 
 import cindy.test.apipost.pojo.DeleteInsertRespon;
+import cindy.test.apipost.pojo.EditRespon;
 import cindy.test.apipost.pojo.GetPostResponData;
 import cindy.test.apipost.pojo.InsertPostRespon;
 import retrofit2.Call;
@@ -21,6 +22,15 @@ public interface RetrofitInter {
                                       @Field("email") String email,
                                       @Field("password") String password,
                                       @Field("data") String data);
+
+    @FormUrlEncoded
+    @PUT("/insert")
+    Call<EditRespon> editDataInsert(@Field("id") long id,
+                                    @Field("name") String name,
+                                    @Field("email") String email,
+                                    @Field("password") String password,
+                                    @Field("data") String data);
+
 
     @GET("/insert?page=1&limit=10")
     Call<GetPostResponData> getDataInsert();
