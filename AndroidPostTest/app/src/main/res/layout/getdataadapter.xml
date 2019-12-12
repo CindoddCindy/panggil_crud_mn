@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_id_klik"
+            app:cardCornerRadius="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardMaxElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:background="#ECE7BB"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#020F52"
+                    android:id="@+id/tv_get_nama"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#020F52"
+                    android:id="@+id/tv_get_email"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#020F52"
+                    android:id="@+id/tv_get_password"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#020F52"
+                    android:id="@+id/tv_get_dataa"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tv_get_data"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_get_update"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_get_create"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_get_id"
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
